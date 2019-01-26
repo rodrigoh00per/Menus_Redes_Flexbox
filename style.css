@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    background: #ff9966;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff5e62, #ff9966);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'IBM Plex Serif', serif;
+}
+
+.contenedor {
+    background-color: white;
+    min-height: calc( 100vh - 20px);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 30px 0 30px;
+}
+
+nav {
+    background-color: #3F51B5;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 20px;
+}
+
+nav ul li:hover {
+    background-color: #1a2770;
+}
+
+nav ul a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+/* sencillo */
+
+.sencillo ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media(min-width:760px) {
+    .sencillo ul {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+}
+
+/* iconos */
+
+.iconos .texto span {
+    font-size: 0.8rem;
+    display: block;
+}
+
+@media(min-width:480px) {
+    .iconos ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .iconos ul li {
+        flex: 0 1 calc(50% - 1rem);
+    }
+}
+
+@media(min-width:760px) {
+    .iconos ul li {
+        flex: 1;
+    }
+}
+
+.iconos ul li a {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.iconos ul li a span {
+    display: inline-block;
+    padding: 0.3rem;
+    text-align: center;
+}
+
+.iconos .icono {
+    flex: 0 1 2rem;
+}
+
+/* Dropdown */
+
+.dropdown ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown ul li {
+    display: flex;
+    flex-direction: column;
+}
+
+@media(min-width:768px) {
+    .dropdown ul {
+        flex-direction: row;
+    }
+    .dropdown ul li {
+        display: flex;
+        position: relative;
+        flex: 1 1 100%;
+    }
+    .dropdown ul li ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #3F51B5;
+    }
+    .dropdown ul li:hover ul {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+}
+
+/* REDES SOCIALES */
+
+.sociales ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.sociales ul li span {
+    display: none;
+}
+
+.sociales ul {}
+
+.sociales ul li a::before {
+    font-family: "Font Awesome 5 Brands";
+}
+
+.sociales ul li a[href*="facebook.com"]::before {
+    content: "\f39e";
+}
+
+.sociales ul li a[href*="twitter.com"]::before {
+    content: "\f099";
+}
+
+.sociales ul li a[href*="youtube.com"]::before {
+    content: "\f167";
+}
+
+.sociales ul li a[href*="instagram.com"]::before {
+    content: "\f16d";
+}
+
+.sociales ul li a[href*="pinterest"]::before {
+    content: "\f0d2";
+}
+
+/* SOCIALES COMBINADO */
+
+.navegacion-dropdown {
+    display: flex;
+    justify-content: space-between;
+    background-color: #3F51B5;
+}
